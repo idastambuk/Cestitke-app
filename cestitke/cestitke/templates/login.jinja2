@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="../static/css/styles.css">
+        <title>Prijava</title>
+    </head>
+    <body>
+        <header>
+            <div id="block-identity">
+                <a href="{{request.route_path('home')}}" class="name">Štrikaona koda</a>
+            </div>
+            {% include 'header_guest.jinja2' %}
+        </header>
+
+        <div class="container">
+            <form id="login" action="{{request.route_path('login')}}" method="post">
+                <h2>Prijava</h2>
+
+                <p class="error-msg"></p>
+
+                <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email">
+                </div>
+                <div class="form-group">
+                        <label for="password">Lozinka</label>
+                        <input type="password" id="password" name="password">
+                </div>
+                <div class="form-group">
+                        <button type="submit" name="login.submit">Prijavi se</button>
+                </div>
+
+            </form>
+        </div>
+        
+    </body>
+</html>

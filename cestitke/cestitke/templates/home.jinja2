@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=latin-ext" rel="stylesheet">
+        <link rel="stylesheet" href="../static/css/styles.css">
+        <title>Newsfeed</title>
+
+        <meta property="og:title" content="E-čestitka">
+        <meta property="og:description" content="Aplikacija za slanje čestitki nastala na 32-satnoj radionici programiranja za žene - Štrikaona koda">
+
+
+    </head>
+    <body>
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<a href="https://twitter.com/share" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+        <header>
+            <div id="block-identity">
+                <a href="{{request.route_path('home')}}" class="name">Štrikaona koda</a>
+            </div>
+            {% if 'user' in request.session %}
+                {% include 'header_logged.jinja2' %}
+            {% else %}
+                {% include 'header_guest.jinja2' %}
+            {% endif %}
+        </header>
+
+         {% include 'newsfeed.jinja2' %}
+        
+    </body>
+</html>

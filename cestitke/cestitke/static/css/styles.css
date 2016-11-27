@@ -1,0 +1,307 @@
+body {
+    color: #888;
+    background-color: #f2f2f2;
+    font-family: Roboto sans-serif;
+    margin: 0;
+    font-weight: 300;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: " ";         
+}
+
+clearfix:after {
+    clear: both;
+}
+
+.container {
+    width: 1170px;
+    height: auto;
+    margin: 0 auto;
+    position:relative;
+}
+
+.left {
+    float:left;
+}
+
+.right{
+    float: right;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+h1, h2 {
+    font-weight: normal;
+}
+
+a{
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: solid 1px #61c9a8;
+    padding-top: 3px;
+}
+
+/**********
+MAIN header
+***********/
+
+header{
+    background-color: #f4f4f8;
+    border-bottom: solid 10px #61c9a8;
+    color: #02040f;
+    margin-bottom: 50px;
+    padding:10px 50px;
+}
+
+#block-identity{
+    display: inline-block;
+    width: 49%
+}
+
+header .name{
+    font-size: 28px;
+    font-weight: 300;
+}
+
+header .name:hover {
+    border-bottom: 0;
+}
+
+#block-user
+{
+    display: inline-block;
+    text-align: right;
+    width: 50%;
+
+}
+
+header #block-user .user-name {
+    font-weight: 700;
+}
+
+/******
+dropdown meni
+*****/
+
+.dropdown span{
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    /***35px img**/
+}
+
+
+.dropdown 
+{
+    display:inline-block;
+    padding-left: 10px;
+    position:relative;
+    vertical-align: middle;
+}
+
+.dropdown-content{
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    display:none;
+    position:absolute;
+    right:0;
+    min-width: 160px;
+    z-index: 10;
+
+}
+
+.dropdown-content a{
+    padding:12px 6px;
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: #f2f2f2;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/******
+FORMS
+******/
+form{
+    width: 650px;
+    }
+
+form#register, form#login, form#eCard
+{
+    background-color: white;
+    border: solid 1px white;
+    border-left: solid 5px #61c9a8;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    padding: 25px 25px 15px 20px;
+    margin: 50px auto 0;
+    width: 470px;
+}
+
+form h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: #61c9a8;
+    line-height: 30px;
+    margin-bottom:10px;
+    margin-top: 0;
+}
+
+.error-msg{
+    color:#ff5648;
+    font-size:17px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    padding:5px;
+}
+.form-group{
+    margin-bottom:15px;
+
+}
+
+input[type="text"],input[type="password"], textarea{
+    box-sizing: border-box;
+    border:solid 3px #ddd;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color: #888;
+    font-family: Roboto sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    height: 50px;
+    line-height: 50px;
+    margin:0;
+    padding:0 15px;
+    vertical-align:middle;
+    width: 100%;
+
+}
+
+
+input[type="file"]{
+    display:block;
+    font-family: Roboto sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    height:50px;
+    padding-top: 3px;
+    font-style: italic;
+}
+
+label{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+label.radio-label{
+    display:inline-block;
+    margin-top:15px;
+}
+
+label.radio-label img{
+    margin-right:20px;
+    vertical-align:top;
+}
+
+button{
+    background: #61c9a8;
+    border: 0;
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    color:white;
+    cursor: pointer;
+    font-family: Roboto sans-serif;
+    font-size:16px;
+    height: 50px;
+    width: 100%;
+}
+
+.preview {
+    width:50%;
+}
+
+/*******
+Newsfeed
+*******/
+
+.card-wrapper {
+    background-color: white;
+    margin: 0 auto 50px;
+    padding:20px 40px;
+    width:620px;
+}
+
+.card-title{
+    font-size: 24ox;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.frame{
+    height: 483px;
+    text-align:center;
+    width: 620px;
+}
+
+.frame.modern {
+    background: url(../img/frames/modern.png) no-repeat center;
+}
+
+.frame.xmas {
+    background: url(../img/frames/xmas.png) no-repeat center;
+}
+
+.frame.bday {
+    background: url(../img/frames/bday.png) no-repeat center;
+}
+
+.frame.love {
+    background: url(../img/frames/love.png) no-repeat center;
+}
+
+.frame img{
+    height:375px;
+    margin-top:54px;
+    width: 500px;
+}
+
+.card-message {
+    color:#02040f;
+    font-style: italic;
+    width: 620px;
+}
+
+.card-divider{
+    border-bottom: solid 1px #61c9a8;
+    display:block;
+    margin-bottom: 10px;
+}
+
+.block-actions img{
+    margin-right: 5px;
+    width: 35px;
+}
+
+.block-actions a:hover{
+    border-bottom:none;
+}

@@ -1,0 +1,11 @@
+<div id="block-user">
+    Bok, <span class="user-name">{{request.session.user.user_name}}</span>!
+        <div class="dropdown">
+            <span>MENI</span>
+            <div class="dropdown-content">
+                <a href="{{request.route_path('add')}}">Dodaj čestitku</a>
+                <a href="{{request.route_path('my')}}">Moje čestitke</a>
+                 <a href="{{request.route_path('logout')}}">Odjava</a>
+             </div>
+        </div>
+</div>
